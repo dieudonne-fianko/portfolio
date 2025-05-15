@@ -1,0 +1,524 @@
+body {
+    font-family: 'Comic sans MS', monospace, sans-serif;
+    margin: 5px;
+    padding: 5px;
+    background-color: #1e1e2f;
+    color: #fff;
+}
+
+#en-tete {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(to bottom, rgba(74, 78, 105, 0.8), rgba(34, 34, 59, 0.8)),
+        url('../images/en-tete.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+#en-tete h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#en-tete p {
+    font-size: 1.2em;
+}
+
+/* fixer le menu*/
+#menu {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    /* Une valeur élevée pour être au-dessus des autres éléments */
+}
+
+
+#menu ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background-color: #2a2a3c;
+    padding: 10px;
+}
+
+
+#menu ul li {
+    margin: 0 15px;
+}
+
+#menu ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#menu ul li a:hover {
+    color: #727070;
+}
+
+#accueil {
+    padding: 50px;
+    background-color: #6adae7;
+    color: #333;
+}
+
+
+/* Style pour la section À propos */
+#apropos {
+    padding: 50px;
+    background-color: #e8f1f2;
+    color: #333;
+}
+
+#apropos-intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#apropos-intro h2 {
+    font-size: 2.5em;
+    color: #1e90ff;
+}
+
+#apropos-intro p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#apropos-details {
+    display: block;
+    gap: 20px;
+    justify-content: center;
+}
+
+.domaine {
+    margin: 25px;
+    background-color: #c4c7c8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.domaine:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.domaine h3 {
+    color: #1e90ff;
+    margin-bottom: 10px;
+}
+
+.domaine ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.domaine p {
+    font-size: 1em;
+}
+
+
+/* Section compétences */
+#competences-contenu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.competence {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.competence:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.competence img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+.competence:hover img {
+    transform: scale(1.2);
+}
+
+.competence p {
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Style pour la section Portfolio */
+#portfolio {
+    padding: 50px;
+    background-color: #f8f9fa;
+    color: #333;
+    text-align: center;
+}
+
+#portfolio-tete h2 {
+    font-size: 2.5em;
+    color: #1e90ff;
+    margin-bottom: 10px;
+}
+
+#portfolio-tete p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+#portfolio-gallerie {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.projet {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.projet:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.projet img {
+    width: 100%;
+    height: auto;
+}
+
+.projet-info {
+    padding: 20px;
+}
+
+.projet-info h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #1e90ff;
+}
+
+.projet-info p {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.projet-info ul {
+    text-align: left;
+}
+
+.projet-info .boutton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #66e877;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.projet-info .boutton:hover {
+    background-color: #03944b;
+}
+
+
+
+/* Style pour la section Expérience professionnelle */
+#experience {
+    padding: 50px;
+    background-color: #e8f1f2;
+    color: #333;
+}
+
+#experience-tete {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#experience-tete h2 {
+    font-size: 2.5em;
+    color: #1e90ff;
+}
+
+#experience-tete p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#exp-detail {
+    position: relative;
+    margin: 20px 0;
+    padding-left: 30px;
+    border-left: 4px solid #1e90ff;
+}
+
+.exp-item {
+    position: relative;
+    margin-bottom: 30px;
+    padding-left: 20px;
+}
+
+.exp-item:last-child {
+    margin-bottom: 0;
+}
+
+.exp-date {
+    font-size: 1em;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.exp-item-contenu {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.exp-item-contenu:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.exp-item-contenu h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #1e90ff;
+}
+
+.exp-item-contenu ul {
+    list-style-type: disc;
+    margin: 10px 0 0 20px;
+}
+
+
+
+/* Style pour la section Formation */
+#formations {
+    padding: 50px;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+}
+
+#formation-tete h2 {
+    font-size: 2.5em;
+    color: #1e90ff;
+    margin-bottom: 10px;
+}
+
+#formation-tete p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+#formation-liste {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.formation {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.formation:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.formation h3 {
+    font-size: 1.5em;
+    color: #1e90ff;
+    margin-bottom: 10px;
+}
+
+.formation p {
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.formation span {
+    font-size: 0.9em;
+    color: #888;
+}
+
+.formation .boutton {
+    display: block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #669ee8;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.formation .boutton:hover {
+    background-color: #031994;
+}
+
+/* Style pour la section Contact */
+#contact {
+    padding: 50px;
+    background-color: #f0f0f0;
+    text-align: center;
+    color: #333;
+}
+
+#contact-tete h2 {
+    font-size: 2.5em;
+    color: #1e90ff;
+    margin-bottom: 10px;
+}
+
+#contact-tete p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+#contact-contenu {
+    display: block;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+#contact-form {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+}
+
+.form {
+    margin-right: 15px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form label {
+    font-size: 1em;
+    color: #555;
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#boutton-contact {
+    background-color: #88c7fb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#boutton-contact:hover {
+    background-color: #0f52be;
+}
+
+/* Pour les écrans de taille moyenne (tablettes) */
+@media screen and (max-width: 1024px) {
+    #menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #menu ul li {
+        margin-bottom: 10px;
+    }
+
+    #contact-form {
+        width: 90%;
+    }
+
+    .projet {
+        width: 80%;
+    }
+}
+
+/* Pour les petits écrans (mobiles) */
+@media screen and (max-width: 768px) {
+    #en-tete {
+        padding: 50px 10px;
+        text-align: center;
+    }
+
+    #en-tete h1 {
+        font-size: 2em;
+    }
+
+    #menu {
+        display: none;
+        /* Masquer le menu normal */
+    }
+
+    #menu-toggle {
+        display: block;
+        text-align: center;
+        font-size: 2em;
+        cursor: pointer;
+        padding: 10px;
+        background-color: #2a2a3c;
+        color: white;
+    }
+
+    #menu ul {
+        flex-direction: column;
+        text-align: center;
+        display: none;
+        /* Masquer les liens par défaut */
+    }
+
+    #menu ul li {
+        margin: 10px 0;
+    }
+
+    #contact-form {
+        width: 95%;
+    }
+
+    .projet {
+        width: 100%;
+    }
+}
